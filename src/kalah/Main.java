@@ -13,7 +13,7 @@ public class Main {
         
         Ventana nv = new Ventana();
         nv.setVisible(true);
-
+        System.out.println("Hola");
     }
 
 }
