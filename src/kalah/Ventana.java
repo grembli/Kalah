@@ -69,6 +69,11 @@ public class Ventana extends javax.swing.JFrame {
         CASA13.setBackground(new java.awt.Color(51, 51, 255));
         CASA13.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         Grupo1.add(CASA13);
+        CASA13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CASA13ActionPerformed(evt);
+            }
+        });
 
         CASA11.setBackground(new java.awt.Color(51, 51, 255));
         CASA11.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -95,10 +100,20 @@ public class Ventana extends javax.swing.JFrame {
         CASA14.setBackground(new java.awt.Color(51, 51, 255));
         CASA14.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         Grupo1.add(CASA14);
+        CASA14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CASA14ActionPerformed(evt);
+            }
+        });
 
         CASA15.setBackground(new java.awt.Color(51, 51, 255));
         CASA15.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         Grupo1.add(CASA15);
+        CASA15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CASA15ActionPerformed(evt);
+            }
+        });
 
         CASA23.setBackground(new java.awt.Color(255, 153, 153));
         CASA23.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -248,22 +263,77 @@ public class Ventana extends javax.swing.JFrame {
         CASA14.setText(String.valueOf(JUG1[3]));
         CASA15.setText(String.valueOf(JUG1[4]));
         CASA16.setText(String.valueOf(JUG1[5]));
+        ALMACEN1.setText(String.valueOf(JUG1[6]));
     }//GEN-LAST:event_CASA11ActionPerformed
 
     private void CASA12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CASA12ActionPerformed
         CASA12.setText("0");
         
-        for(int i=0;i<(JUG1[1]);i++){
+        for(int i=2;i<(JUG1[1]+2);i++){
             JUG1[i]=JUG1[i]+1;
-            
         }
         JUG1[1]=0;
         CASA13.setText(String.valueOf(JUG1[2]));
         CASA14.setText(String.valueOf(JUG1[3]));
         CASA15.setText(String.valueOf(JUG1[4]));
         CASA16.setText(String.valueOf(JUG1[5]));
-        
+        ALMACEN1.setText(String.valueOf(JUG1[6]));
+        if(JUG1[1]>5){   
+            CASA26.setText(String.valueOf(JUG2[5]+1));
+            CASA25.setText(String.valueOf(JUG2[4]+1));
+        }
     }//GEN-LAST:event_CASA12ActionPerformed
+
+    private void CASA13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CASA13ActionPerformed
+        CASA13.setText("0");
+        
+        for(int i=3;i<(JUG1[2]+3);i++){
+            JUG1[i]=JUG1[i]+1;
+        }
+        JUG1[2]=0;
+        CASA14.setText(String.valueOf(JUG1[3]));
+        CASA15.setText(String.valueOf(JUG1[4]));
+        CASA16.setText(String.valueOf(JUG1[5]));
+        ALMACEN1.setText(String.valueOf(JUG1[6]));
+        if(JUG1[2]>4){
+            CASA26.setText(String.valueOf(JUG2[5]+1));
+            CASA25.setText(String.valueOf(JUG2[4]+1));
+        }
+    }//GEN-LAST:event_CASA13ActionPerformed
+
+    private void CASA14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CASA14ActionPerformed
+        CASA14.setText("0");
+        
+        for(int i=4;i<(JUG1[3]+4);i++){
+            JUG1[i]=JUG1[i]+1;
+        }
+        JUG1[3]=0;
+        
+        CASA15.setText(String.valueOf(JUG1[4]));
+        CASA16.setText(String.valueOf(JUG1[5]));
+        ALMACEN1.setText(String.valueOf(JUG1[6]));
+        if(JUG1[3]>3){
+            CASA26.setText(String.valueOf(JUG2[5]+1));
+            CASA25.setText(String.valueOf(JUG2[4]+1));
+        }
+    }//GEN-LAST:event_CASA14ActionPerformed
+
+    private void CASA15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CASA15ActionPerformed
+        CASA15.setText("0");
+        
+        for(int i=5;i<(JUG1[3]+5);i++){
+            JUG1[i]=JUG1[i]+1;
+        }
+        JUG1[4]=0;
+        
+        CASA16.setText(String.valueOf(JUG1[5]));
+        ALMACEN1.setText(String.valueOf(JUG1[6]));
+        if(JUG1[4]>2){
+            CASA26.setText(String.valueOf(JUG2[5]+1));
+            CASA25.setText(String.valueOf(JUG2[4]+1));
+            CASA24.setText(String.valueOf(JUG2[3]+1));
+        }
+    }//GEN-LAST:event_CASA15ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -331,8 +401,10 @@ public class Ventana extends javax.swing.JFrame {
         CASA16.setText("3");
         
         for(int i=0;i<JUG1.length;i++){
-            JUG1[i]=3;
+            
+                JUG1[i]=3;
         }
+            JUG1[6]=0;
         
         CASA21.setText("3");
         CASA22.setText("3");
@@ -344,6 +416,7 @@ public class Ventana extends javax.swing.JFrame {
         for(int i=0;i<JUG2.length;i++){
             JUG2[i]=3;
         }
+        JUG2[6]=0;
     }
 
 }

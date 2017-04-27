@@ -162,6 +162,9 @@
               <ComponentRef name="Grupo1"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CASA13ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="CASA11">
           <Properties>
@@ -220,6 +223,9 @@
               <ComponentRef name="Grupo1"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CASA14ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="CASA15">
           <Properties>
@@ -233,6 +239,9 @@
               <ComponentRef name="Grupo1"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CASA15ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="CASA23">
           <Properties>
