@@ -253,7 +253,7 @@ public class Ventana extends javax.swing.JFrame {
     private void CASA12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CASA12ActionPerformed
         CASA12.setText("0");
         
-        for(int i=1;i<(JUG1[1]);i++){
+        for(int i=0;i<(JUG1[1]);i++){
             JUG1[i]=JUG1[i]+1;
             
         }
