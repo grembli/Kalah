@@ -16,8 +16,8 @@ public class Ventana extends javax.swing.JFrame {
      */
     String turno="0";
     int tur=0;
-    int[] JUG1 = new int[6];
-    int[] JUG2 = new int[6];
+    int[] JUG1 = new int[7];
+    int[] JUG2 = new int[7];
     public Ventana() {
         initComponents();
         
