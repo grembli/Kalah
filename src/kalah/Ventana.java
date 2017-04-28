@@ -252,10 +252,11 @@ public class Ventana extends javax.swing.JFrame {
 
     private void CASA11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CASA11ActionPerformed
         CASA11.setText("0");
+        int ultimasemilla=0;
         
         for(int i=1;i<(JUG1[0]+1);i++){
             JUG1[i]=JUG1[i]+1;
-            int ultimasemilla=0;
+            ultimasemilla=0;
         }
         
         JUG1[0]=0;
@@ -265,6 +266,7 @@ public class Ventana extends javax.swing.JFrame {
         CASA15.setText(String.valueOf(JUG1[4]));
         CASA16.setText(String.valueOf(JUG1[5]));
         ALMACEN1.setText(String.valueOf(JUG1[6]));
+        
         
         if(ultimasemilla==3){
             if(JUG1[3]==0){
@@ -281,7 +283,7 @@ public class Ventana extends javax.swing.JFrame {
         else{
             
         }
-        
+    }    
         public void activar_grupo1(){
         CASA11.setEnabled(true);
         CASA12.setEnabled(true);
