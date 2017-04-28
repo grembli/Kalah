@@ -96,6 +96,11 @@ public class Ventana extends javax.swing.JFrame {
         CASA16.setBackground(new java.awt.Color(51, 51, 255));
         CASA16.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         Grupo1.add(CASA16);
+        CASA16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CASA16ActionPerformed(evt);
+            }
+        });
 
         CASA14.setBackground(new java.awt.Color(51, 51, 255));
         CASA14.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -256,7 +261,7 @@ public class Ventana extends javax.swing.JFrame {
         
         for(int i=1;i<(JUG1[0]+1);i++){
             JUG1[i]=JUG1[i]+1;
-            ultimasemilla=0;
+            ultimasemilla++;
         }
         
         JUG1[0]=0;
@@ -266,56 +271,74 @@ public class Ventana extends javax.swing.JFrame {
         CASA15.setText(String.valueOf(JUG1[4]));
         CASA16.setText(String.valueOf(JUG1[5]));
         ALMACEN1.setText(String.valueOf(JUG1[6]));
+        if(JUG1[0]>6){
+            CASA26.setText(String.valueOf(JUG2[5]+1));
+            if(JUG1[0]>7){
+                CASA25.setText(String.valueOf(JUG2[4]+1));
+            }
+            if(JUG1[0]>8){
+                CASA24.setText(String.valueOf(JUG2[3]+1));
+            }
+            if(JUG1[0]>9){
+                CASA23.setText(String.valueOf(JUG2[2]+1));
+            }
+            if(JUG1[0]>10){
+                CASA22.setText(String.valueOf(JUG2[1]+1));
+            }
+            if(JUG1[0]>11){
+                CASA21.setText(String.valueOf(JUG2[0]+1));
+            }    
+        }
         
         
-        if(ultimasemilla==3){
-            if(JUG1[3]==0){
-                ALMACEN1.setText(String.valueOf(Integer.parseInt(CASA14.getText())+Integer.parseInt(CASA24.getText())));
-                CASA24.setText("0");
-                CASA14.setText("0");
-                desactivar_grupo2();
-            }
-            else{
-                desactivar_grupo1();
-            }
-            
-        }
-        else{
-            
-        }
-    }    
-        public void activar_grupo1(){
-        CASA11.setEnabled(true);
-        CASA12.setEnabled(true);
-        CASA13.setEnabled(true);
-        CASA14.setEnabled(true);
-        CASA15.setEnabled(true);
-        CASA16.setEnabled(true);
-    }
-    public void desactivar_grupo1() {
-        CASA11.setEnabled(false);
-        CASA12.setEnabled(false);
-        CASA13.setEnabled(false);
-        CASA14.setEnabled(false);
-        CASA15.setEnabled(false);
-        CASA16.setEnabled(false);
-    }
-    public void activar_grupo2() {
-        CASA21.setEnabled(true);
-        CASA22.setEnabled(true);
-        CASA23.setEnabled(true);
-        CASA24.setEnabled(true);
-        CASA25.setEnabled(true);
-        CASA26.setEnabled(true);
-    }
-    public void desactivar_grupo2() {
-        CASA21.setEnabled(false);
-        CASA22.setEnabled(false);
-        CASA23.setEnabled(false);
-        CASA24.setEnabled(false);
-        CASA25.setEnabled(false);
-        CASA26.setEnabled(false);
-    
+//        if(ultimasemilla==3){
+//            if(JUG1[3]==0){
+//                ALMACEN1.setText(String.valueOf(Integer.parseInt(CASA14.getText())+Integer.parseInt(CASA24.getText())));
+//                CASA24.setText("0");
+//                CASA14.setText("0");
+//                desactivar_grupo2();
+//            }
+//            else{
+//                desactivar_grupo1();
+//            }
+//            
+//        }
+//        else{
+//            
+//        }
+//    }    
+//        public void activar_grupo1(){
+//        CASA11.setEnabled(true);
+//        CASA12.setEnabled(true);
+//        CASA13.setEnabled(true);
+//        CASA14.setEnabled(true);
+//        CASA15.setEnabled(true);
+//        CASA16.setEnabled(true);
+//    }
+//    public void desactivar_grupo1() {
+//        CASA11.setEnabled(false);
+//        CASA12.setEnabled(false);
+//        CASA13.setEnabled(false);
+//        CASA14.setEnabled(false);
+//        CASA15.setEnabled(false);
+//        CASA16.setEnabled(false);
+//    }
+//    public void activar_grupo2() {
+//        CASA21.setEnabled(true);
+//        CASA22.setEnabled(true);
+//        CASA23.setEnabled(true);
+//        CASA24.setEnabled(true);
+//        CASA25.setEnabled(true);
+//        CASA26.setEnabled(true);
+//    }
+//    public void desactivar_grupo2() {
+//        CASA21.setEnabled(false);
+//        CASA22.setEnabled(false);
+//        CASA23.setEnabled(false);
+//        CASA24.setEnabled(false);
+//        CASA25.setEnabled(false);
+//        CASA26.setEnabled(false);
+//    
     }//GEN-LAST:event_CASA11ActionPerformed
 
     private void CASA12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CASA12ActionPerformed
@@ -324,16 +347,31 @@ public class Ventana extends javax.swing.JFrame {
         for(int i=2;i<(JUG1[1]+2);i++){
             JUG1[i]=JUG1[i]+1;
         }
-        JUG1[1]=0;
+        
         CASA13.setText(String.valueOf(JUG1[2]));
         CASA14.setText(String.valueOf(JUG1[3]));
         CASA15.setText(String.valueOf(JUG1[4]));
         CASA16.setText(String.valueOf(JUG1[5]));
         ALMACEN1.setText(String.valueOf(JUG1[6]));
-        if(JUG1[1]>5){   
+        if(JUG1[1]>6){
             CASA26.setText(String.valueOf(JUG2[5]+1));
-            CASA25.setText(String.valueOf(JUG2[4]+1));
+            if(JUG1[1]>7){
+                CASA25.setText(String.valueOf(JUG2[4]+1));
+            }
+            if(JUG1[1]>8){
+                CASA24.setText(String.valueOf(JUG2[3]+1));
+            }
+            if(JUG1[1]>9){
+                CASA23.setText(String.valueOf(JUG2[2]+1));
+            }
+            if(JUG1[1]>10){
+                CASA22.setText(String.valueOf(JUG2[1]+1));
+            }
+            if(JUG1[1]>11){
+                CASA21.setText(String.valueOf(JUG2[0]+1));
+            }    
         }
+        JUG1[1]=0;
     }//GEN-LAST:event_CASA12ActionPerformed
 
     private void CASA13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CASA13ActionPerformed
@@ -342,15 +380,30 @@ public class Ventana extends javax.swing.JFrame {
         for(int i=3;i<(JUG1[2]+3);i++){
             JUG1[i]=JUG1[i]+1;
         }
-        JUG1[2]=0;
+        
         CASA14.setText(String.valueOf(JUG1[3]));
         CASA15.setText(String.valueOf(JUG1[4]));
         CASA16.setText(String.valueOf(JUG1[5]));
         ALMACEN1.setText(String.valueOf(JUG1[6]));
-        if(JUG1[2]>4){
+        if(JUG1[2]>6){
             CASA26.setText(String.valueOf(JUG2[5]+1));
-            CASA25.setText(String.valueOf(JUG2[4]+1));
+            if(JUG1[2]>7){
+                CASA25.setText(String.valueOf(JUG2[4]+1));
+            }
+            if(JUG1[2]>8){
+                CASA24.setText(String.valueOf(JUG2[3]+1));
+            }
+            if(JUG1[2]>9){
+                CASA23.setText(String.valueOf(JUG2[2]+1));
+            }
+            if(JUG1[2]>10){
+                CASA22.setText(String.valueOf(JUG2[1]+1));
+            }
+            if(JUG1[2]>11){
+                CASA21.setText(String.valueOf(JUG2[0]+1));
+            }    
         }
+        JUG1[2]=0;
     }//GEN-LAST:event_CASA13ActionPerformed
 
     private void CASA14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CASA14ActionPerformed
@@ -364,28 +417,84 @@ public class Ventana extends javax.swing.JFrame {
         CASA15.setText(String.valueOf(JUG1[4]));
         CASA16.setText(String.valueOf(JUG1[5]));
         ALMACEN1.setText(String.valueOf(JUG1[6]));
-        if(JUG1[3]>3){
+        if(JUG1[3]>6){
             CASA26.setText(String.valueOf(JUG2[5]+1));
-            CASA25.setText(String.valueOf(JUG2[4]+1));
+            if(JUG1[3]>7){
+                CASA25.setText(String.valueOf(JUG2[4]+1));
+            }
+            if(JUG1[3]>8){
+                CASA24.setText(String.valueOf(JUG2[3]+1));
+            }
+            if(JUG1[3]>9){
+                CASA23.setText(String.valueOf(JUG2[2]+1));
+            }
+            if(JUG1[3]>10){
+                CASA22.setText(String.valueOf(JUG2[1]+1));
+            }
+            if(JUG1[3]>11){
+                CASA21.setText(String.valueOf(JUG2[0]+1));
+            }    
         }
     }//GEN-LAST:event_CASA14ActionPerformed
 
     private void CASA15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CASA15ActionPerformed
         CASA15.setText("0");
         
-        for(int i=5;i<(JUG1[3]+5);i++){
+        for(int i=5;i<(JUG1[4]+5);i++){
             JUG1[i]=JUG1[i]+1;
         }
         JUG1[4]=0;
         
         CASA16.setText(String.valueOf(JUG1[5]));
         ALMACEN1.setText(String.valueOf(JUG1[6]));
-        if(JUG1[4]>2){
+        if(JUG1[4]>6){
             CASA26.setText(String.valueOf(JUG2[5]+1));
-            CASA25.setText(String.valueOf(JUG2[4]+1));
-            CASA24.setText(String.valueOf(JUG2[3]+1));
+            if(JUG1[4]>7){
+                CASA25.setText(String.valueOf(JUG2[4]+1));
+            }
+            if(JUG1[4]>8){
+                CASA24.setText(String.valueOf(JUG2[3]+1));
+            }
+            if(JUG1[4]>9){
+                CASA23.setText(String.valueOf(JUG2[2]+1));
+            }
+            if(JUG1[4]>10){
+                CASA22.setText(String.valueOf(JUG2[1]+1));
+            }
+            if(JUG1[4]>11){
+                CASA21.setText(String.valueOf(JUG2[0]+1));
+            }    
         }
     }//GEN-LAST:event_CASA15ActionPerformed
+
+    private void CASA16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CASA16ActionPerformed
+        CASA15.setText("0");
+        
+        for(int i=6;i<(JUG1[5]+6);i++){
+            JUG1[i]=JUG1[i]+1;
+        }
+        JUG1[5]=0;
+        
+        ALMACEN1.setText(String.valueOf(JUG1[6]));
+        if(JUG1[5]>6){
+            CASA26.setText(String.valueOf(JUG2[5]+1));
+            if(JUG1[5]>7){
+                CASA25.setText(String.valueOf(JUG2[4]+1));
+            }
+            if(JUG1[5]>8){
+                CASA24.setText(String.valueOf(JUG2[3]+1));
+            }
+            if(JUG1[5]>9){
+                CASA23.setText(String.valueOf(JUG2[2]+1));
+            }
+            if(JUG1[5]>10){
+                CASA22.setText(String.valueOf(JUG2[1]+1));
+            }
+            if(JUG1[5]>11){
+                CASA21.setText(String.valueOf(JUG2[0]+1));
+            }    
+        }
+    }//GEN-LAST:event_CASA16ActionPerformed
 
     /**
      * @param args the command line arguments
